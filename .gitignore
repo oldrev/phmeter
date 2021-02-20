@@ -1,0 +1,15 @@
+*.kicad_sch-bak
+*-backups/
+*.bak
+*.kicad_prl
+
+_autosave*
+
+fp-info-cache
+
+.~*
+
+*.plan
+
+*.FCStd1
+*.fcstd1

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "PH2012")(type "KiCad")(uri "${KIPRJMOD}/PH2102.kicad_sym")(options "")(descr ""))
+)
