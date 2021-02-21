@@ -1,0 +1,2 @@
+Texas Instruments
+SUBCKT TLV333 IN+ IN- VCC VEE OUT Texas:TLV333 [OpAmp]
