@@ -2,3 +2,4 @@
 *.op.raw
 *.log
 *.net
+*autosave*.TSC
