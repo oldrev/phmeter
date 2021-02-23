@@ -13,3 +13,4 @@ fp-info-cache
 
 *.FCStd1
 *.fcstd1
+_output/
