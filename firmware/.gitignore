@@ -1,0 +1,68 @@
+# Main folder is needed to:
+#   1. Illustrate the layout of an ESP-IDF project.
+#   2. Debug the driver.
+# The code there is not important and must not
+# be versioned.
+
+# ESP-IDF project files
+build/
+sdkconfig
+sdkconfig.old
+debug.log
+test/build/
+test/sdkconfig
+test/sdkconfig.old
+
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+build/

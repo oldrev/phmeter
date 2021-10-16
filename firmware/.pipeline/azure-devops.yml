@@ -1,0 +1,42 @@
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - 'components/*'
+      - 'main/*'
+      - 'test/*'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- checkout: self
+  displayName: Checkout
+  lfs: false
+  submodules: recursive
+- task: Docker@2
+  displayName: Login Docker
+  inputs:
+    containerRegistry: 'Docker Registry'
+    command: 'login'
+    addPipelineData: false
+- task: PowerShell@2
+  displayName: Pull ESP-IDF Image
+  inputs:
+    targetType: 'inline'
+    failOnStderr: true
+    script: docker pull espressif/idf:latest
+- task: PowerShell@2
+  displayName: Build
+  inputs:
+    targetType: 'inline'
+    failOnStderr: false
+    script: docker run --rm -e LC_ALL='C.UTF-8' -v $(Build.Repository.LocalPath):/project -w /project espressif/idf idf.py build
+- task: PowerShell@2
+  displayName: Build Test
+  inputs:
+    targetType: 'inline'
+    failOnStderr: false
+    script: docker run --rm -e LC_ALL='C.UTF-8' -v $(Build.Repository.LocalPath):/project -w /project espressif/idf idf.py -C ./test build
