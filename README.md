@@ -1,3 +1,3 @@
 # A pH Meter Analog Front End Board (Experimental)
 
-![image](./docs/board.png "Board")
+<p align="center"><img width="100%" src="https://raw.githubusercontent.com/oldrev/phmeter/master/docs/images/board.png"></p>
